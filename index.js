@@ -71,6 +71,7 @@ console.log(animalString)
 
 let animalData1 = JSON.parse(animalString)
 console.log(animalData1)
+
 // Arrow and Anonymous functions
 
 
@@ -114,5 +115,40 @@ console.log(array2.reduce(reducer));
 // expected output: 10
 // 5 + 1 + 2 + 3 + 4
 console.log(array2.reduce(reducer, 5));
+
+//spread  operator /rest operator:
+
+
+function addNumbers(a, b, c, d) {
+    return a + b + c + d;
+}
+
+const numbers = [1, 2, 3, 4];
+console.log(addNumbers(...numbers)); // Output will be 10 (1 + 2 + 3 + 4)
+
+//if not using spread, it will be  treated like this:
+console.log(addNumbers(numbers[0], numbers[1], numbers[2], numbers[3])); 
+//--------------------------------------
+
+//rest  parameter : collects all the remaining arguments passed to a function into a single array ( the opposite of spread)
+//In this example, the sum function accepts any number of arguments.
+// When you call sum, all the arguments passed are collected into the numbers array using the rest parameter syntax (...numbers). 
+//Then, reduce() is used to sum up all the numbers in the array. 
+//This way, you can pass any number of arguments to sum, and it will correctly calculate their sum regardless of the number of arguments passed.
+function sum(...numbers) {
+    return numbers.reduce((total, num) => total + num, 0);
+}
+
+console.log(sum(1, 2, 3, 4, 5)); // Output: 15
+console.log(sum(10, 20)); // Output: 30
+console.log(sum()); // Output: 0
+
+
+
+
+
+
+
+ 
 
 
