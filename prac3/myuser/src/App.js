@@ -21,7 +21,10 @@ function App() {
   // const fetchUser=async ()=> {
   //   const url = `https://reqres.in/api/users/3`;
   //   const res = await fetch(url);
+    
+
   //   const res_1 = await res.json();
+  //   console.log(res_1)
   //   return res_1.data;
   // }
 
