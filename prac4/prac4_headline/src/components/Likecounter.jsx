@@ -22,7 +22,7 @@ const Likecounter=()=>{
 
     return (
       <>
-      <h1>this is my like counter !</h1>
+      <p>this is my like counter !</p>
       <p>Overall Count: {counter}</p>
       <button onClick={increment}>Like</button>
       <br/>
