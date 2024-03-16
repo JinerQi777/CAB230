@@ -1,10 +1,17 @@
 import Likecounter from "./Likecounter";
 
-const Headline=({content})=>{
+const Headline=({time,text,temp,wind})=>{
+  
     return (
       <>
-      
-      <h2>{content}</h2>
+      <ul>
+        <li>{time}</li>
+        <li>{text}</li>
+        <li>{temp}</li>
+        <li>{wind}</li>
+      </ul>
+     
+
       <Likecounter/>
   
       </>
