@@ -2,7 +2,7 @@
 
 // clean up our sturcutre
 
-//https://www.weatherapi.com/login.aspx
+//https://www.weatherapi.com/login.aspx change to https://www.visualcrossing.com/
 
 //get a api key and store in the .env file 
 
@@ -48,16 +48,29 @@ function App() {
   if (error) {
     return <p>Error : {error.message}</p>
   }
-// from original data list to form a new list that contain each obj has time,text,temp,wind:
-  const forecasts = data.forecast.forecastday[0].hour.map(r => {
+  // from original data list to form a new list that contain each obj has time,text,temp,wind:
+  // const forecasts = data.forecast.forecastday[0].hour.map(r => {
+  //   return {
+  //     time: r.time,
+  //     text: r.condition.text,
+  //     temp: r.temp_c,
+  //     wind: r.wind_kph
+  //   }
+  // })
+
+  /////// due to WeatherAPI has intermittently been unavailable for the past few days.
+
+  
+
+  const forecasts = data.days.map(forecast => {
     return {
-      time: r.time,
-      text: r.condition.text,
-      temp: r.temp_c,
-      wind: r.wind_kph
+      time: forecast.datetime,
+      text: forecast.description,
+      temp: forecast.temp,
+      wind: forecast.windspeed
     }
   })
-
+  console.log(data);
   return (
     <div >
       <h1>Welcome week 4!</h1>
