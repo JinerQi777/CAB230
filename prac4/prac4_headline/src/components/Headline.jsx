@@ -1,6 +1,6 @@
 import Likecounter from "./Likecounter";
 
-const Headline=({time,text,temp,wind})=>{
+const Headline=({time,text,temp,wind,icon})=>{
   
     return (
       <>
@@ -9,6 +9,7 @@ const Headline=({time,text,temp,wind})=>{
         <li>{text}</li>
         <li>{temp}</li>
         <li>{wind}</li>
+        <img src={icon} alt='weather icon' /> 
       </ul>
      
 

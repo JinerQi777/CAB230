@@ -1,3 +1,8 @@
+// add icon , using the weatherapi (for the student who ask me how to...)
+// for those who attend my class today, if you are using .env and it doesn't work , just restart the app then it will work.
+
+
+
 // Render a list of headline ( key props)
 
 // clean up our sturcutre
@@ -49,28 +54,29 @@ function App() {
     return <p>Error : {error.message}</p>
   }
   // from original data list to form a new list that contain each obj has time,text,temp,wind:
-  // const forecasts = data.forecast.forecastday[0].hour.map(r => {
-  //   return {
-  //     time: r.time,
-  //     text: r.condition.text,
-  //     temp: r.temp_c,
-  //     wind: r.wind_kph
-  //   }
-  // })
-
+  const forecasts = data.forecast.forecastday[0].hour.map(r => {
+    return {
+      time: r.time,
+      text: r.condition.text,
+      temp: r.temp_c,
+      wind: r.wind_kph,
+      icon: r.condition.icon
+    }
+  })
+console.log(data)
   /////// due to WeatherAPI has intermittently been unavailable for the past few days.
 
   
 
-  const forecasts = data.days.map(forecast => {
-    return {
-      time: forecast.datetime,
-      text: forecast.description,
-      temp: forecast.temp,
-      wind: forecast.windspeed
-    }
-  })
-  console.log(data);
+  // const forecasts = data.days.map(forecast => {
+  //   return {
+  //     time: forecast.datetime,
+  //     text: forecast.description,
+  //     temp: forecast.temp,
+  //     wind: forecast.windspeed
+  //   }
+  // })
+
   return (
     <div >
       <h1>Welcome week 4!</h1>
