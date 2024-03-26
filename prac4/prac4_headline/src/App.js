@@ -66,7 +66,7 @@ function App() {
 console.log(data)
   /////// due to WeatherAPI has intermittently been unavailable for the past few days.
 
-  
+
 
   // const forecasts = data.days.map(forecast => {
   //   return {
