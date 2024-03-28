@@ -9,7 +9,7 @@ import  { useState, useEffect } from "react";
 const url='https://openlibrary.org/subjects/drama.json?published_in=2000'
 
 const useBook = () => {
-    const [rowData, setRowData] = useState(null);
+    const [rowData, setRowData] = useState([]);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(false)
     
